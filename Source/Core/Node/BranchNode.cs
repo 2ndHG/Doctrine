@@ -8,13 +8,15 @@ public class BranchNode : Node
     public Node? IfNode { get; set; }
     public Node? ElseNode { get; set; }
 
-    public List<Condition> Conditions { get; init; } = [];
+    public List<Condition>? Conditions { get; set; }
 
     public bool Evaluate(BattleContext battleContext, CharacterContext targetCharacter)
     {
-        foreach(Condition condition in Conditions)
+        if (Conditions == null)
+            return false;
+        foreach (Condition condition in Conditions)
         {
-            if(!condition.Evaluate(battleContext, targetCharacter))
+            if (!condition.Evaluate(battleContext, targetCharacter))
                 return false;
         }
         return true;

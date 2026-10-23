@@ -9,6 +9,9 @@ public class Game1 : Microsoft.Xna.Framework.Game
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
 
+    private BattleContext _battleContext;
+    private DecisionTree _playerTree;
+
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
@@ -28,6 +31,18 @@ public class Game1 : Microsoft.Xna.Framework.Game
         _spriteBatch = new SpriteBatch(GraphicsDevice);
 
         // TODO: use this.Content to load your game content here
+        _battleContext.Player.Attributes.Add("Hp", 100);
+        _battleContext.Player.Attributes.Add("Mana", 50);
+        _battleContext.Player.Attributes.Add("Stamina", 50);
+
+        _playerTree.EntryNode = new BranchNode()
+        {
+            Name = "Branch1",
+            Conditions = [
+                new AttributeCompareInt("Stamina", 0, 0, AttributeComparator.Greater)
+            ],
+            IfNode = new EndActionNode()
+        };
     }
 
     protected override void Update(GameTime gameTime)
