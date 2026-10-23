@@ -10,15 +10,15 @@ public class BranchNode : Node
     public Node? IfNode { get; set; }
     public Node? ElseNode { get; set; }
 
-    public List<ConditionItem>? Conditions { get; set; }
+    public List<Condition>? Conditions { get; set; }
 
     public bool Evaluate(BattleContext battleContext, CharacterContext targetCharacter)
     {
         if (Conditions == null)
             return false;
-        foreach (ConditionItem item in Conditions)
+        foreach (Condition condition in Conditions)
         {
-            if (!item.Rule.Evaluate(battleContext, targetCharacter))
+            if (!condition.Rule.Evaluate(battleContext, targetCharacter))
                 return false;
         }
         return true;

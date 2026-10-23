@@ -7,7 +7,7 @@ public record AttributeCompareNumber(
     double TargetValue,
     bool DefaultReturn,
     AttributeComparator Comparator
-) : Condition
+) : ConditionRule
 {
     public override bool Evaluate(BattleContext battleContext, CharacterContext targetCharacter)
     {

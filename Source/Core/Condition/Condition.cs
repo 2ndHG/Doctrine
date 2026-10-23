@@ -1,6 +1,9 @@
+using System;
+
 namespace MyGame;
 
-public abstract record Condition
+public class Condition
 {
-    public abstract bool Evaluate(BattleContext battleContext, CharacterContext targetCharacter);
+    public Guid Id { get; init; } = Guid.NewGuid();
+    public required ConditionRule Rule { get; init; }
 }

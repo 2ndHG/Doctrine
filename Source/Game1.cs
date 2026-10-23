@@ -39,7 +39,7 @@ public class Game1 : Microsoft.Xna.Framework.Game
         {
             Name = "Branch1",
             Conditions = [
-                new ConditionItem { Rule = new AttributeCompareNumber("Stamina", 0, false, AttributeComparator.Greater) }
+                new Condition { Rule = new AttributeCompareNumber("Stamina", 0, false, AttributeComparator.Greater) }
             ],
             IfNode = new EndActionNode()
         };
