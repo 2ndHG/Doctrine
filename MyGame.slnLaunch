@@ -1,0 +1,29 @@
+[
+  {
+    "Name": "DesktopGL",
+    "Projects": [
+      {
+        "Path": "Platforms\\DesktopGL\\MyGame.DesktopGL.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Content\\Content.csproj",
+        "Action": "None"
+      }
+    ]
+  }
+  ,
+  {
+    "Name": "DesktopVK",
+    "Projects": [
+      {
+        "Path": "Platforms\\DesktopVK\\MyGame.DesktopVK.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Content\\Content.csproj",
+        "Action": "None"
+      }
+    ]
+  }
+]

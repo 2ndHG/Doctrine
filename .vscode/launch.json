@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "MyGame (DesktopGL)",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/Platforms/DesktopGL/MyGame.DesktopGL.csproj",
+            "preLaunchTask": "Build: DesktopGL"
+        }
+        ,
+        {
+            "name": "MyGame (DesktopVK)",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/Platforms/DesktopVK/MyGame.DesktopVK.csproj",
+            "preLaunchTask": "Build: DesktopVK"
+        }
+    ]
+}

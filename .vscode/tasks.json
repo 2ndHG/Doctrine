@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build: DesktopGL",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/Platforms/DesktopGL/MyGame.DesktopGL.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary",
+                "/tl:off"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+        ,
+        {
+            "label": "Build: DesktopVK",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/Platforms/DesktopVK/MyGame.DesktopVK.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary",
+                "/tl:off"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
