@@ -1,6 +1,6 @@
 namespace MyGame;
 
-public class EndAction : Node
+public class EndActionNode : Node
 {
     public void Fire() { }
 }

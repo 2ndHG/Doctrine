@@ -20,19 +20,16 @@ public class DecisionTree
             }
         }
 
-        if (currentNode is EndAction endAction)
+        if (currentNode is EndActionNode endAction)
         {
             return new TriggerResult() { Success = true, EndAction = endAction };
         }
-        
+
         return new TriggerResult() { Success = false, EndAction = null };
     }
 
 
-    public record TriggerResult
+    public readonly record struct TriggerResult(bool Success, EndActionNode? EndAction)
     {
-        public bool Success { get; set; } = false;
-        public EndAction? EndAction { get; set; } = null;
-
     }
 }

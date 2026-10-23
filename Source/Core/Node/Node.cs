@@ -1,5 +1,5 @@
 namespace MyGame;
-public interface Node
+public class Node
 {
     
 }
