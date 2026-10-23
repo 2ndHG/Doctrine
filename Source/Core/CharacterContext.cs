@@ -4,5 +4,5 @@ namespace MyGame;
 
 public class CharacterContext
 {
-    public Dictionary<string, object> Attributes { get; init; } = [];
+    public Dictionary<string, AttributeValue> Attributes { get; init; } = [];
 }

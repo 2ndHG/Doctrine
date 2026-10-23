@@ -9,8 +9,8 @@ public class Game1 : Microsoft.Xna.Framework.Game
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
 
-    private BattleContext _battleContext;
-    private DecisionTree _playerTree;
+    private BattleContext _battleContext = new();
+    private DecisionTree _playerTree = new();
 
     public Game1()
     {
@@ -39,7 +39,7 @@ public class Game1 : Microsoft.Xna.Framework.Game
         {
             Name = "Branch1",
             Conditions = [
-                new AttributeCompareInt("Stamina", 0, 0, AttributeComparator.Greater)
+                new ConditionItem { Rule = new AttributeCompareNumber("Stamina", 0, false, AttributeComparator.Greater) }
             ],
             IfNode = new EndActionNode()
         };

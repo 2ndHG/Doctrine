@@ -1,18 +1,23 @@
+using System;
+
 namespace MyGame;
 
 public record AttributeCompareString(
-    string AttributeKey, 
-    string? TargetValue, 
-    string? DefaultValue, 
+    string AttributeKey,
+    string? TargetValue,
+    bool DefaultReturn,
     AttributeComparator Comparator
 ) : Condition
 {
     public override bool Evaluate(BattleContext battleContext, CharacterContext targetCharacter)
     {
-        string? value = DefaultValue;
-        if (targetCharacter.Attributes.TryGetValue(AttributeKey, out object? attr)
-            && attr is string stringValue)
-            value = stringValue;
+        if (!targetCharacter.Attributes.TryGetValue(AttributeKey, out AttributeValue attr))
+            return DefaultReturn;
+
+        if (!attr.TryGetText(out string value))
+            throw new InvalidOperationException(
+                $"Attribute \"{AttributeKey}\" is {attr}, but {nameof(AttributeCompareString)} expects a String.");
+
         return Comparator switch
         {
             AttributeComparator.Equal => value == TargetValue,

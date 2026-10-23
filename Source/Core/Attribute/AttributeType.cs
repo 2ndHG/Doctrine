@@ -2,8 +2,8 @@ namespace MyGame;
 
 public enum AttributeType
 {
-    Double,
-    Int,
+    None = 0,
+    Number,
     Bool,
     String
 }
