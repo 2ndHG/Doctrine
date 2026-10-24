@@ -2,18 +2,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "MyGame (DesktopGL)",
+            "name": "Doctrine (DesktopGL)",
             "type": "dotnet",
             "request": "launch",
-            "projectPath": "${workspaceFolder}/Platforms/DesktopGL/MyGame.DesktopGL.csproj",
+            "projectPath": "${workspaceFolder}/Platforms/DesktopGL/Doctrine.DesktopGL.csproj",
             "preLaunchTask": "Build: DesktopGL"
         }
         ,
         {
-            "name": "MyGame (DesktopVK)",
+            "name": "Doctrine (DesktopVK)",
             "type": "dotnet",
             "request": "launch",
-            "projectPath": "${workspaceFolder}/Platforms/DesktopVK/MyGame.DesktopVK.csproj",
+            "projectPath": "${workspaceFolder}/Platforms/DesktopVK/Doctrine.DesktopVK.csproj",
             "preLaunchTask": "Build: DesktopVK"
         }
     ]

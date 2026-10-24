@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace MyGame;
+namespace Doctrine;
 
 public class TurnInfo
 {

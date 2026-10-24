@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace MyGame;
+namespace Doctrine;
 
 [JsonConverter(typeof(AttributeValueJsonConverter))]
 public readonly record struct AttributeValue

@@ -1,4 +1,4 @@
-# MyGame
+# Doctrine
 
 A clean, empty [MonoGame](https://monogame.net/) project for all supported desktop and mobile platforms, using the new MonoGame Content Builder.
 

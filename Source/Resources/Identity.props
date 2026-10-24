@@ -12,15 +12,18 @@
   <PropertyGroup>
 
     <!-- The name of the built executable and assembly. -->
-    <AssemblyName>MyGame</AssemblyName>
-    <AssemblyTitle>MyGame</AssemblyTitle>
+    <AssemblyName>Doctrine</AssemblyName>
+    <AssemblyTitle>Doctrine</AssemblyTitle>
+
+    <!-- The default namespace for new files added by an IDE. -->
+    <RootNamespace>Doctrine</RootNamespace>
 
     <!-- The display name players see. Used for the iOS home screen label. -->
-    <ApplicationTitle>MyGame</ApplicationTitle>
+    <ApplicationTitle>Doctrine</ApplicationTitle>
 
     <!-- Your unique app identity. Change this before publishing to any store.
          Becomes the Android package name and the iOS bundle identifier. -->
-    <ApplicationId>com.companyname.mygame</ApplicationId>
+    <ApplicationId>com.companyname.doctrine</ApplicationId>
 
     <!-- Build number, incremented every store submission. Android versionCode, iOS CFBundleVersion. -->
     <ApplicationVersion>1</ApplicationVersion>

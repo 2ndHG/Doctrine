@@ -1,4 +1,4 @@
-namespace MyGame;
+namespace Doctrine;
 
 public enum AttributeType
 {

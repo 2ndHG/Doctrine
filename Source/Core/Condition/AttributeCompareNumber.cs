@@ -1,6 +1,6 @@
 using System;
 
-namespace MyGame;
+namespace Doctrine;
 
 public record AttributeCompareNumber(
     string AttributeKey,

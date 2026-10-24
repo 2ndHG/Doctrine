@@ -1,9 +1,9 @@
-namespace MyGame;
+namespace Doctrine;
 
 public record AttackProcess(
     string AttributeKey,
     AttributeValue Value,
-    ProcessType Comparator
+    ProcessType Op
 ) : ActionProcess
 {
     public override void Process(TurnInfo turn)

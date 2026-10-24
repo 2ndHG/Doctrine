@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Platforms/DesktopGL/MyGame.DesktopGL.csproj",
+                "${workspaceFolder}/Platforms/DesktopGL/Doctrine.DesktopGL.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary",
                 "/tl:off"
@@ -21,7 +21,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Platforms/DesktopVK/MyGame.DesktopVK.csproj",
+                "${workspaceFolder}/Platforms/DesktopVK/Doctrine.DesktopVK.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary",
                 "/tl:off"

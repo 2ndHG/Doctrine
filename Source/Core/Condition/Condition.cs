@@ -1,6 +1,6 @@
 using System;
 
-namespace MyGame;
+namespace Doctrine;
 
 public class Condition
 {

@@ -5,9 +5,9 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platforms", "Platforms", "{66BF3FB5-F51F-4191-BA6A-B3938893999A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyGame.DesktopGL", "Platforms\DesktopGL\MyGame.DesktopGL.csproj", "{D8112931-7435-4566-BE78-1EB114AD1490}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doctrine.DesktopGL", "Platforms\DesktopGL\Doctrine.DesktopGL.csproj", "{D8112931-7435-4566-BE78-1EB114AD1490}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyGame.DesktopVK", "Platforms\DesktopVK\MyGame.DesktopVK.csproj", "{CC0F3514-029B-4D1A-B152-1E7868CA302C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doctrine.DesktopVK", "Platforms\DesktopVK\Doctrine.DesktopVK.csproj", "{CC0F3514-029B-4D1A-B152-1E7868CA302C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Content", "Content\Content.csproj", "{F5ADCB79-4D06-4DE5-AC04-7BE60BC1DA09}"
 EndProject
