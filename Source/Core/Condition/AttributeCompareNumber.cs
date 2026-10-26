@@ -9,7 +9,7 @@ public record AttributeCompareNumber(
     AttributeComparator Comparator
 ) : ConditionRule
 {
-    public override bool Evaluate(BattleContext battleContext, CharacterContext targetCharacter)
+    public override bool Evaluate(CharacterContext targetCharacter)
     {
         if (!targetCharacter.Attributes.TryGetValue(AttributeKey, out AttributeValue attr))
             return DefaultReturn;

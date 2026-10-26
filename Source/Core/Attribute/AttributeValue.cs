@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 namespace Doctrine;
@@ -49,4 +51,36 @@ public readonly record struct AttributeValue
         AttributeType.String => $"Text(\"{_text}\")",
         _ => "None"
     };
+}
+
+public static class AttributeValueExtension
+{
+    public static void Increment(this Dictionary<string, AttributeValue> attributes, string key)
+    {
+        if (attributes.TryGetValue(key, out AttributeValue value))
+        {
+            if (value.TryGetNumber(out double numberValue))
+            {
+                attributes[key] = AttributeValue.Number(numberValue++);
+            }
+            else
+            {
+                throw new InvalidOperationException($"{key} is {value}, but TurnInfo.Increment expects a Number.");
+            }
+        }
+    }
+    public static void Decrement(this Dictionary<string, AttributeValue> attributes, string key)
+    {
+        if (attributes.TryGetValue(key, out AttributeValue value))
+        {
+            if (value.TryGetNumber(out double numberValue))
+            {
+                attributes[key] = AttributeValue.Number(numberValue--);
+            }
+            else
+            {
+                throw new InvalidOperationException($"{key} is {value}, but TurnInfo.Increment expects a Number.");
+            }
+        }
+    }
 }

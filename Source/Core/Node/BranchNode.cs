@@ -12,13 +12,13 @@ public class BranchNode : Node
 
     public List<Condition>? Conditions { get; set; }
 
-    public bool Evaluate(BattleContext battleContext, CharacterContext targetCharacter)
+    public bool Evaluate(CharacterContext self, CharacterContext opponent)
     {
         if (Conditions == null)
             return false;
         foreach (Condition condition in Conditions)
         {
-            if (!condition.Rule.Evaluate(battleContext, targetCharacter))
+            if (!condition.Evaluate(self, opponent))
                 return false;
         }
         return true;
