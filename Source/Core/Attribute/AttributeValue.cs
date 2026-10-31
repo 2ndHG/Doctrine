@@ -61,11 +61,11 @@ public static class AttributeValueExtension
         {
             if (value.TryGetNumber(out double numberValue))
             {
-                attributes[key] = AttributeValue.Number(numberValue++);
+                attributes[key] = AttributeValue.Number(numberValue + 1);
             }
             else
             {
-                throw new InvalidOperationException($"{key} is {value}, but TurnInfo.Increment expects a Number.");
+                throw new InvalidOperationException($"{key} is {value}, but Increment expects a Number.");
             }
         }
     }
@@ -75,12 +75,34 @@ public static class AttributeValueExtension
         {
             if (value.TryGetNumber(out double numberValue))
             {
-                attributes[key] = AttributeValue.Number(numberValue--);
+                attributes[key] = AttributeValue.Number(numberValue - 1);
             }
             else
             {
-                throw new InvalidOperationException($"{key} is {value}, but TurnInfo.Increment expects a Number.");
+                throw new InvalidOperationException($"{key} is {value}, but Decrement expects a Number.");
             }
         }
+    }
+    // Unlike Increment/Decrement, a missing key is treated as 0.
+    public static void AddNumber(this Dictionary<string, AttributeValue> attributes, string key, double delta)
+    {
+        double current = attributes.GetNumber(key);
+        attributes[key] = AttributeValue.Number(current + delta);
+    }
+    public static double GetNumber(this Dictionary<string, AttributeValue> attributes, string key, double defaultValue = 0)
+    {
+        if (!attributes.TryGetValue(key, out AttributeValue value))
+            return defaultValue;
+        if (!value.TryGetNumber(out double numberValue))
+            throw new InvalidOperationException($"{key} is {value}, but GetNumber expects a Number.");
+        return numberValue;
+    }
+    public static string GetText(this Dictionary<string, AttributeValue> attributes, string key, string defaultValue = "")
+    {
+        if (!attributes.TryGetValue(key, out AttributeValue value))
+            return defaultValue;
+        if (!value.TryGetText(out string textValue))
+            throw new InvalidOperationException($"{key} is {value}, but GetText expects a Text.");
+        return textValue;
     }
 }

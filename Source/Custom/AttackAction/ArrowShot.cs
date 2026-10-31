@@ -6,6 +6,6 @@ public record ArrowShot : AttackAction
     {
         turn.Attacker.Attributes.Decrement("arrowCount");
         turn.AttackAttributes.Add("rangeType", AttributeValue.Text("ranged"));
-        turn.AttackAttributes.Add("damage", AttributeValue.Number(10));
+        turn.Damage.Add(new DamagePart(Element.Physical, 10));
     }
 }

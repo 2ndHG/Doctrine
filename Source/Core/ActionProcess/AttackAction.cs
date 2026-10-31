@@ -8,7 +8,7 @@ public abstract record AttackAction
     public virtual bool CheckRequirement(CharacterContext user, CharacterContext opponent)
     {
         foreach (Condition condition in Requirement)
-            if (!condition.Rule.Evaluate(opponent))
+            if (!condition.Evaluate(user, opponent))
                 return false;
         return true;
     }
